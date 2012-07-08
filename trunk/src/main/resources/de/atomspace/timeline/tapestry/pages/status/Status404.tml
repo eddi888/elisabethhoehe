@@ -1,0 +1,10 @@
+<html  t:type="layout" title="404"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter"
+      >
+      <body>
+      	<h1>404</h1>
+		<pre>nix gefunden</pre>
+    </body>
+</html>

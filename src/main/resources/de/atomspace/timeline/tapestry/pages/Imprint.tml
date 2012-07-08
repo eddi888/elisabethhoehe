@@ -1,0 +1,13 @@
+<html t:type="layout" title="Impressum" 
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+	<head>
+		<meta name="robots" content="noindex" />
+	</head>
+	<h1>Impressum</h1>
+	<p><b>private Homepage</b><br/>
+	Edgar Wentzlaff<br/>
+	Karl-Liebknecht-Straße 43<br/>
+	14542 Werder(Havel) GT Elisabethhöhe<br/>
+    </p>
+</html>

@@ -1,39 +1,38 @@
-<html t:type="layout" title="UPLOAD"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
+<html t:type="layout" title="UPLOAD" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">
 
-   <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
-	<h1>Foto veröffentlichen</h1>			
-	<t:form>
-		<table>
-			<tr>
-				<td></td>
-				<td><t:errors/></td>
-			</tr>
-			<tr>
-				<td>Beschreibung</td>
-				<td><input t:type="TextField" t:id="description" t:value="description" validate="required"/></td>
-			</tr>
-			<tr>
-				<td>Jahr</td>
-				<td><input t:type="TextField" t:id="year" t:value="year" validate="required"/></td>
-			</tr>
-			<tr>
-				<td>Foto</td>
-				<td><input t:type="upload" t:id="file" t:value="file" validate="required"/></td>
-			</tr>
-			<tr>
-				<td>Fotograf</td>
-				<td><input t:type="TextField" t:id="author" t:value="author" /></td>
-			</tr>
-			<tr>
-				<td>Lizenz</td>
-				<td><input t:type="TextField" t:id="licence" t:value="licence" /></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Upload"/></td>
-			</tr>
-		</table>
-	</t:form>
+    <h1>Foto veröffentlichen</h1>
+
+    <t:form>
+        <table>
+            <tr>
+                <td></td>
+                <td><t:errors /></td>
+            </tr>
+            <tr>
+                <td>Beschreibung</td>
+                <td><input t:type="TextField" t:id="description" t:value="description" validate="required" /></td>
+            </tr>
+            <tr>
+                <td>Jahr</td>
+                <td><input t:type="TextField" t:id="year" t:value="year" validate="required" /></td>
+            </tr>
+            <tr>
+                <td>Foto</td>
+                <td><input t:type="upload" t:id="file" t:value="file" validate="required" /></td>
+            </tr>
+            <tr>
+                <td>Fotograf</td>
+                <td><input t:type="TextField" t:id="author" t:value="author" /></td>
+            </tr>
+            <tr>
+                <td>Lizenz</td>
+                <td><input t:type="TextField" t:id="licence" t:value="licence" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Upload" /></td>
+            </tr>
+        </table>
+    </t:form>
 </html>

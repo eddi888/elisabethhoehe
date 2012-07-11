@@ -1,54 +1,46 @@
-<html t:type="layout" title="timeline Index"
-      t:sidebarTitle="Framework Version"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
-      
-   	<div id="navi">
-		<t:loop source="years" value="year" >
-			<t:pagelink class="${year.style}" page="index" context="year.year" >&nbsp;${year.view}&nbsp;</t:pagelink>
-		</t:loop>
-	</div>
-   
-	<h1>${currentYear}</h1>
-	<t:if test="moments.empty"  >
-		Noch keine Fotos fÃ¼r das Jahr ${currentYear} vorhanden.
-		<p />
-		<p />
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<p  />
-	</t:if>
-	<t:if test="!moments.empty"  >
-		<div>
-			<t:loop source="moments" value="moment" >
-				<t:pagelink  page="moment/view" context="moment.id">
-					<img src="moment/media/${moment.id}/${moment.attachmentIdPreview}" />
-				</t:pagelink>
-			</t:loop>
-		</div>
-	</t:if>
-	
-	<hr />
-	
-	    <div style="float:left;">
-		    <table border="1">
-		    	<tbody>
-		    		<tr>
-		    			<td width="33%" VALIGN="TOP">
-		    				Direkt Hochladen: Die Foto sind schon eingescannt, dann kÃ¶nnen diese direkt hochgeladen werden.
-		    				<t:pagelink page="moment/upload" context="currentYear" >UPLOAD</t:pagelink>
-		    			</td>
-		    			<td width="33%" VALIGN="TOP">
-		    				Per Post: Die Fotos per Post an mich schicken. Diese werden eingescannt und umgehend zurÃ¼ck geschickt.
-		    			</td>
-		    			<td width="33%" VALIGN="TOP">
-		    				Per Mail: Foto per Mail an mich schicken. Die Fotos werden umgehen verÃ¶ffentlicht.
-		    			</td>
-		    		</tr>
-		    	</tbody>
-		    </table>
-	    </div>
-   		
+<html t:type="layout" title="timeline Index" t:sidebarTitle="Framework Version"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+
+<div id="navi">
+    <t:loop source="years" value="year">
+        <t:pagelink class="${year.style}" page="index" context="year.year">&nbsp;${year.view}&nbsp;</t:pagelink>
+    </t:loop>
+</div>
+
+<h1>${currentYear}</h1>
+<t:if test="moments.empty">
+    Noch keine Fotos für das Jahr ${currentYear} vorhanden.
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</t:if>
+<t:if test="!moments.empty">
+    <div>
+        <t:loop source="moments" value="moment">
+            <t:pagelink page="moment/view" context="moment.id">
+                <img src="moment/media/${moment.id}/${moment.attachmentIdPreview}" />
+            </t:pagelink>
+        </t:loop>
+    </div>
+</t:if>
+
+<hr />
+
+<div style="float: left;">
+    <table border="1">
+        <tbody>
+            <tr>
+                <td width="33%" VALIGN="TOP">Direkt Hochladen: Die Foto sind schon eingescannt, dann können diese
+                    direkt hochgeladen werden. <t:pagelink page="moment/upload" context="currentYear">UPLOAD</t:pagelink>
+                </td>
+                <td width="33%" VALIGN="TOP">Per Post: Die Fotos per Post an mich schicken. Diese werden
+                    eingescannt und umgehend zurück geschickt.</td>
+                <td width="33%" VALIGN="TOP">Per Mail: Foto per Mail an mich schicken. Die Fotos werden umgehen
+                    veröffentlicht.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 </html>

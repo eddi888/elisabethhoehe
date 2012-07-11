@@ -12,47 +12,59 @@ import de.atomspace.timeline.moment.domain.Moment;
 @Service
 public class MomentService {
 
-	@Autowired
-	MomentRepository momentRepository;
+    @Autowired
+    MomentRepository momentRepository;
 
-	public void add(Moment moment) {
-		momentRepository.add(moment);
-	}
+    public void add(Moment moment) {
+        momentRepository.add(moment);
+    }
 
-	public void update(Moment moment) {
-		momentRepository.update(moment);
-	}
+    public void update(Moment moment) {
+        momentRepository.update(moment);
+    }
 
-	public AttachmentInputStream getAttachment(String momentId, String attachmentId) {
-		AttachmentInputStream data = momentRepository.getDb().getAttachment(momentId, attachmentId);
-		return data;
-	}
+    public AttachmentInputStream getAttachment(String momentId, String attachmentId) {
+        AttachmentInputStream data = momentRepository.getDb().getAttachment(momentId, attachmentId);
+        return data;
+    }
 
-	public Moment findOneById(String id) {
-		return momentRepository.get(id);
-	}
-	public List<Moment> findByYear(int year) {
-		List<Moment> all = momentRepository.findByYear(year);
-		List<Moment> byYears = new ArrayList<Moment>();
-		for (Moment moment : all) {
-			if (moment.isPublished() == true) {
-				byYears.add(moment);
-			}
-		}
+    public Moment findOneById(String id) {
+        return momentRepository.get(id);
+    }
 
-		return byYears;
-	}
+    public List<Moment> findByYear(int year) {
+        List<Moment> all = momentRepository.findByYear(year);
+        List<Moment> byYears = new ArrayList<Moment>();
+        for (Moment moment : all) {
+            if (moment.isPublished() == true) {
+                byYears.add(moment);
+            }
+        }
 
-	public List<Moment> findByYear(int year, String visibleKey) {
-		List<Moment> all = momentRepository.findByYear(year);
-		List<Moment> byYears = new ArrayList<Moment>();
-		for (Moment moment : all) {
-			if (moment.isPublished() == true || visibleKey.equals(moment.getVisibleKey())) {
-				byYears.add(moment);
-			}
-		}
+        return byYears;
+    }
 
-		return byYears;
-	}
+    public List<Moment> findByYear(int year, String visibleKey) {
+        List<Moment> all = momentRepository.findByYear(year);
+        List<Moment> byYear = new ArrayList<Moment>();
+        for (Moment moment : all) {
+            if (moment.isPublished() == true || visibleKey.equals(moment.getVisibleKey())) {
+                byYear.add(moment);
+            }
+        }
+
+        return byYear;
+    }
+
+    public List<Moment> findByYears(int year, String visibleKey) {
+        List<Moment> all = momentRepository.findByYears(year);
+        List<Moment> byYears = new ArrayList<Moment>();
+        for (Moment moment : all) {
+            if (moment.isPublished() == true || visibleKey.equals(moment.getVisibleKey())) {
+                byYears.add(moment);
+            }
+        }
+        return byYears;
+    }
 
 }

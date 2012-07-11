@@ -1,30 +1,29 @@
-<html t:type="layout" title="VIEW"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
-      xmlns:p="tapestry:parameter">
+<html t:type="layout" title="VIEW" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">
 
-		<h1>
-			<t:pagelink page="index" context="moment.year" >&lt;&lt;${moment.year}</t:pagelink>
-		</h1>
-	
-	    <img src="../media/${moment.id}/${moment.attachmentId}" width="850px" />
-	    
-		<table width="250px">
-				<tr>
-					<td>Beschreibung: ${moment.description}</td>
-					<td> </td>
-				</tr>
-				<tr>
-					<td>Jahr: ${moment.year}</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Fotograf: ${moment.author}</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Lizenz: ${moment.licence}</td>
-					<td></td>
-				</tr>
-				
-		</table>
+    <h1>
+        <t:pagelink page="index" context="moment.year">&lt;&lt;${moment.year}</t:pagelink>
+    </h1>
+    
+    <img src="../media/${moment.id}/${moment.attachmentId}" width="850px" />
+    
+    <table width="250px">
+        <tr>
+            <td>Beschreibung: ${moment.description}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jahr: ${moment.year}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fotograf: ${moment.author}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lizenz: ${moment.licence}</td>
+            <td></td>
+        </tr>
+    
+    </table>
 </html>
